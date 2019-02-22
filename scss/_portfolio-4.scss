@@ -1,0 +1,75 @@
+/*
+    Portfolio V4
+*/
+.portfolio-v4{
+    @extend .portfolio-v2;
+    .box{
+        overflow: hidden;
+        position: relative;
+        &:hover{
+            .box-bototm-to-top{
+                top: 0;
+                @include transition();
+            }
+            .box-top-to-bottom{
+                bottom: 0;
+                transition: all .5s ease .5s;
+            }
+        }
+        .box-bototm-to-top{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            background: rgba(#000, .5);
+            transition: all .5s ease .5s;
+        }
+        .box-top-to-bottom{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 100%;
+            left: 0;
+            @include transition();
+            a{
+                margin: 0 10px;
+                display: inline-block;
+                width: 37px;
+                height: 37px;
+                line-height: 37px;
+                border: 1px solid $white-text;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 15px;
+                color: $white-text;
+                @include transition();
+                &:hover{
+                    background: $white-text;
+                    color: $black-text;
+                    @include transition();
+                }
+            }
+            h3{
+                padding: 26px 0 7px 0;
+                @include font-merriweather();
+                @include font-bold();
+                color: $white-text;
+                font-size: 33px;
+                line-height: 36px;
+            }
+            p{
+                @include font-roboto();
+                @include font-light();
+                color: #e4e4e4;
+                font-size: 16px;
+                font-style: italic;
+                span{
+                    padding-right: 7px;
+                }
+            }
+        }
+    }
+}

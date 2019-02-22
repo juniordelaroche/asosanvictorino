@@ -1,0 +1,143 @@
+/*
+    Diamond Business
+*/
+.diamond-business-v2{
+    @extend .diamond-business;
+    .box-content{
+        padding: 17px 43px;
+        border-left: 4px solid $primary-color-green;
+        > p{
+            padding: 20px 0 0 0;
+        }
+    }
+}
+/*
+    Count Number
+*/
+.count-number-v3{
+    @extend .count-number;
+    margin-top: 0;
+    padding: 0;
+    border-bottom: none;
+    .number{
+        padding: 55px 0;
+        border-top: 1px solid #dcddde;
+    }
+    .box{
+        border: none;
+        padding: 0;
+        &:hover{
+            @include translate-y(0);
+            box-shadow: none;
+        }
+        .counter{
+            padding-top: 0;
+        }
+    }
+}
+/*
+    Mission And Vision
+*/
+.mission-vision{
+    background: url('../images/about/mission-vision.jpg');
+    @include background-parallax();
+    .box-content{
+        h3{
+            @include font-roboto();
+            @include font-black();
+            color: $white-text;
+            font-size: 40px;
+            line-height: 40px;
+            padding-bottom: 28px;
+        }
+        p{
+            @include font-roboto();
+            @include font-light();
+            color: $white-text;
+            font-size: 19px;
+            padding-bottom: 22px;
+            strong{
+                @include font-medium();
+            }
+        }
+        .diamond-button{
+            margin-top: 29px;
+        }
+    }
+}
+/*
+    Slay Hello
+*/
+.slay-hello{
+    overflow: hidden;
+    .diamond-title-v1{
+        margin-bottom: 65px;
+    }
+    .owl-stage-outer{
+        overflow: visible;
+    }
+    .owl-item{
+        opacity: 0;
+        pointer-events: none;
+        &.active{
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    li{
+        .box{
+            border: 1px solid #e4e4e4;
+            background: #fafafa;
+            border-radius: 10px;
+            @include transition();
+            &:hover{
+                box-shadow: 0 0 45px rgba(#000, .09);
+            }
+            .box-img{
+                padding: 15px 15px 0 15px;
+                img{
+                    width: auto;
+                    margin: 0 auto;
+                }
+            }
+            .diamond-box-hv-reveal-right-overlay{
+                background: rgba(#4f4f4f, .9);
+                .box-scale{
+                    .box-content{
+                        padding-bottom: 37px;
+                        h3{
+                            @include font-roboto();
+                            @include font-bold();
+                            font-size: 33px;
+                            line-height: 36px;
+                            color: $white-text;
+                        }
+                        p{
+                            @include font-merriweather();
+                            @include font-regular();
+                            font-size: 14px;
+                            font-style: italic;
+                            padding-bottom: 11px;
+                        }
+                        .list-social{
+                            li{
+                                padding: 0 8px;
+                                display: inline-block;
+                                &:first-child{
+                                    padding-left: 0;
+                                }
+                                &:last-child{
+                                    padding-right: 0;
+                                }
+                                a{
+                                    font-size: 12px;
+                                    color: #dcddde;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

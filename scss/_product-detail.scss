@@ -1,0 +1,350 @@
+/*
+    Product Detail 
+*/
+.product-detail{
+    &.diamond-set-pd{
+        padding-bottom: 42px;
+    }
+    .box-detail{
+        .box-product-detail{
+            margin-left: -10px;
+            float: left;
+            width: 45%;
+            li{
+                outline: none;
+                .box-img, .box-thumbanil{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #fafafa;
+                    border: 1px solid #e4e4e4;
+                    border-radius: 5px;
+                    margin: 0 10px;
+                    img{
+                        display: block;
+                    }
+                }
+            }
+            .slick-big-images{
+                margin-bottom: 20px;
+                li{
+                    .box-img{
+                        height: 420px;
+                        img{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+            .slick-thumbnail-images{
+                li{
+                    &.slick-current{
+                        .box-thumbanil{
+                            border: 1px solid $primary-color-green;
+                        }
+                    }
+                    .box-thumbanil{
+                        height: 122px;
+                        cursor: pointer;
+                        padding: 0 15px;
+                    }
+                }
+            }
+        }
+        .box-detail-content{
+            width: 55%;
+            float: right;
+            padding: 0 40px;
+            > h3{
+                font-size: 33px;
+                line-height: 30px;
+                color: $black-text;
+                @include font-roboto();
+                @include font-medium();
+            }
+            .rating{
+                line-height: 20px;
+                margin-bottom: 8px;
+                li{
+                    span{
+                        font-size: 10px;
+                        color: #f2cf2d;
+                    }
+                }
+            }
+            p{
+                padding-bottom: 15px;
+                font-size: 14px;
+                color: #7a7c7d;
+                @include font-roboto();
+                @include font-light();
+                &.price{
+                    @include font-bold();
+                    font-size: 25px;
+                    color: $primary-color-green;
+                    i{
+                        padding-right: 20px;
+                        color: #dcddde;
+                        text-decoration: line-through;
+                        @include font-light();
+                    }
+                }
+            }
+            .qty-color{
+                margin: 20px 0 40px 0;
+                .box-qty{
+                    margin-right: 25px;
+                    width: 95px;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    position: relative;
+                    button{
+                        font-size: 8px;
+                        @include font-regular();
+                        color: rgba(#1b1313, .5);
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border: 1px solid #dcddde;
+                        background: transparent;
+                        outline: none;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        cursor: pointer;
+                        &:hover{
+                            color: rgba($second-text, 1);
+                        }
+                        &.qty-minus{
+                            left: 0;
+                        }
+                        &.qty-plus{
+                            right: 0;
+                        }
+                    }
+                    input{
+                        width: 100%;
+                        height: 30px;
+                        padding: 0 35px;
+                        text-align: center;
+                        border: 1px solid #e0e0e0;
+                        border-radius: 30px;
+                        background: transparent;
+                        font-size: 12px;
+                        @include font-roboto();
+                        @include font-regular();
+                        color: #1b1313;
+                    }
+                }
+                .box-color{
+                    ul{
+                        display: flex;
+                        li{
+                            padding-right: 15px;
+                            &:last-child{
+                                padding-right: 0;
+                            }
+                            &:nth-child(1){
+                                label{
+                                    background: #e9684a;
+                                }
+                            }
+                            &:nth-child(2){
+                                label{
+                                    background: #f5e246;
+                                }
+                            }
+                            &:nth-child(3){
+                                label{
+                                    background: #86df50;
+                                }
+                            }
+                            &:nth-child(4){
+                                label{
+                                    background: #5abcea;
+                                }
+                            }
+                            label{
+                                display: block;
+                                width: 20px; 
+                                height: 20px;
+                                border-radius: 5px;
+                            }
+                            input[type="checkbox"]:not(:checked),input[type="checkbox"]:checked{
+                                position: absolute;
+                                left: -9999px;
+                            }
+                            input[type="checkbox"]:not(:checked) + label,input[type="checkbox"]:checked + label{
+                                position: relative;
+                                cursor: pointer;
+                            }
+                            input[type="checkbox"]:not(:checked) + label:after,input[type="checkbox"]:checked + label:after{
+                                content: '\f00c';
+                                font-family: 'FontAwesome';
+                                font-size: 10px;
+                                line-height: 20px;
+                                position: absolute;
+                                top: 0;
+                                left: 5px;
+                                color: $white-text;
+                                transition: all .5s;
+                            }
+                            input[type="checkbox"]:not(:checked) + label:after{
+                                opacity: 0;
+                                @include scale(0);
+                            }
+                            input[type="checkbox"]:checked + label:after{
+                                opacity: 1;
+                                @include scale(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .box-review{
+        margin-top: 45px;
+        .uk-subnav{
+            margin-left: 0px;
+            margin-top: 0px;
+            li{
+                padding: 0px;
+                margin: 0 5px 0 0;
+                a{
+                    @include font-roboto();
+                    @include font-bold();
+                    line-height: 44px;
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #7a7c7d;
+                    padding: 0 20px;
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    background: #e4e4e4;
+                }
+            }
+        }
+        .uk-subnav-pill > .uk-active > *{
+            background: $primary-color-green;
+            color: #ffffff;
+        }
+        .uk-switcher{
+            padding: 25px 35px;
+            text-align: left;
+            border: 1px solid #e4e4e4;
+            .product-description{
+                p{
+                    font-size: 16px;
+                    color: #7a7c7d;
+                    @include font-roboto();
+                    @include font-light();
+                }
+            }
+            .poduct-reviews{
+                h3{
+                    padding-bottom: 15px;
+                    font-size: 30px;
+                    line-height: 36px;
+                    color: #1b2725;
+                    @include font-black();
+                }
+                li{
+                    &:last-child{
+                        margin-bottom: 30px;
+                    }
+                    .review{
+                        padding: 15px 0;
+                        border-bottom: 1px solid #dcddde;
+                        .author{
+                            > *{
+                                margin-right: 5px;
+                            }
+                            h6{
+                                font-size: 14px;
+                                color: $second-text;
+                                @include font-roboto();
+                                @include font-bold();
+                            }
+                            p{
+                                font-size: 14px;
+                                color: $second-text;
+                                @include font-roboto();
+                                @include font-medium();
+                            }
+                            li{
+                                margin-bottom: 0;
+                                display: inline-block;
+                                span{
+                                    color: #f5e246;
+                                }
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            color: $second-text;
+                            @include font-roboto();
+                            @include font-regular();
+                        }
+                    }
+                }
+                .form-comment{
+                    form{
+                        h5{
+                            font-size: 16px;
+                            color: $black-text;
+                            @include font-roboto();
+                            @include font-regular();
+                        }
+                        input, textarea{
+                            @include font-roboto();
+                            font-size: 14px;
+                            color: $black-text;
+                            @include font-regular();
+                            border: 1px solid #e4e4e4;
+                            outline: none;
+                            background: transparent;
+                            margin-bottom: 20px;
+                            padding: 7px 20px;
+                            &:focus{
+                                border: 1px solid $primary-color-green;
+                            }
+                        }
+                        input{
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                        .jq-ry-container{
+                            padding: 0px;
+                            padding-bottom: 15px;
+                            width: 75px!important;
+                            >.jq-ry-group-wrapper{
+                                >.jq-ry-group{
+                                    >svg{
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .related-product{
+        margin-top: 90px;
+        > h3{
+            padding-bottom: 30px;
+            font-size: 24px;
+            color: #4c4f50;
+            @include font-roboto();
+            @include font-medium();
+        }
+        .diamond-box-product{
+            margin-bottom: 0;
+        }
+    }
+}

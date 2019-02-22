@@ -1,0 +1,209 @@
+/*
+    Slider
+*/
+.slider-v5{
+    .banner-caption-button{
+        font-size: 90px;
+    }
+    .banner-caption-h1{
+        @include font-roboto();
+        @include font-bold();
+        font-size: 60px;
+        line-height: 60px;
+        color: $white-text;
+    }
+    .banner-caption-p{
+        @include font-roboto();
+        @include font-regular();
+        font-size: 19px;
+        color: $white-text;
+        text-transform: uppercase;
+    }
+    .services-v2{
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+        display: block;
+        .box{
+            position: relative;
+            &:before, &:after{
+                content: '';
+                background: rgba(#000, .8);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+            &:before{
+                right: 100%;
+            }
+            &:after{
+                left: 99.999%;
+            }
+        }
+    }
+}
+/*
+    Services
+*/
+.services-v2{
+    display: none;
+    li{
+        &:nth-child(odd){
+            background: rgba(#000, .8);
+        }
+        &:nth-child(even){
+            background: rgba($primary-color-blue, .8);
+        }
+        .diamond-text-center{
+            padding: 45px 25px;
+            .box-icon{
+                .flaticon{
+                    &:before{
+                        margin-left: 0;
+                        font-size: 30px;
+                        color: $white-text;
+                    }
+                }
+            }
+            .box-content{
+                h3{
+                    @include font-roboto();
+                    @include font-medium();
+                    font-size: 19px;
+                    color: $white-text;
+                    padding-top: 21px;
+                    padding-bottom: 9px;
+                }
+                p{
+                    @include font-roboto();
+                    @include font-light();
+                    font-size: 14px;
+                    color: $white-text;
+                }
+            }
+        }
+    }
+}
+/*
+    We Make Beauty
+*/
+.we-make-beauty{
+    @extend .recent-project;
+    .title{
+        h3{
+            @include font-roboto();
+            @include font-regular();
+            font-size: 55px;
+            line-height: 55px;
+            color: $black-text;
+            padding-bottom: 27px;
+        }
+        p{
+            @include font-roboto();
+            @include font-light();
+            font-size: 14px;
+            color: $second-text;
+            padding: 0 15%;
+            padding-bottom: 65px;
+        }
+    }
+    .our-project-menu{
+        float: none;
+        margin-bottom: 36px;
+    }
+}
+/*
+    Premium Quality
+*/
+.premium-quality{
+    .switcher-menu{
+        position: relative;
+        &:before{
+            content: '';
+            width: 1px;
+            height: 53px;
+            background: #85b5e6;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            @include translate-xy(-50%, -50%);
+        }
+        li{
+            position: relative;
+            text-align: center;
+            &:hover, &.uk-active{
+                &:before{
+                    bottom: -17px;
+                }
+                a{
+                    color: $white-text;
+                }
+            }
+            &:before{
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-top: 17px solid $primary-color-blue;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                @include translate-x(-50%);
+                @include transition();
+            }
+            a{
+                @include font-roboto();
+                @include font-regular();
+                font-size: 25px;
+                line-height: 90px;
+                color: rgba($white-text, .5);
+                @include transition();
+                span{
+                    padding-right: 12px;
+                }
+            }
+        }
+    }
+    .switcher-content{
+        background: url('../images/index-5/bg-premium-quality.jpg');
+        @include background-parallax();
+        .diamond-box-img-hv-shin{
+            border-radius: 10px;
+            img{
+                border-radius: 10px;
+            }
+        }
+        .check-list{
+            padding-left: 25px;
+            li{
+                padding-bottom: 22px;
+                &:last-child{
+                    padding-bottom: 0;
+                }
+                p{
+                    @include font-roboto();
+                    @include font-light();
+                    font-size: 19px;
+                    color: $white-text;
+                    span{
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+/*
+    Action
+*/
+.action-v3{
+    @extend .action-v2;
+    background: url('../images/index-5/action.jpg') no-repeat center center;
+    @include background-cover();
+}

@@ -1,0 +1,313 @@
+/*
+    Slider
+*/
+.slider-v4{
+    @extend .slider-v1;
+    .tp-mask-wrap{
+        overflow: visible !important;
+    }
+    .banner-caption-h1{
+        text-transform: uppercase;
+        font-size: 70px;
+        line-height: 70px;
+        span{
+            color: $primary-color-yellow;
+        }
+    }
+    .banner-caption-h3{
+        font-size: 25px;
+        line-height: 30px;
+        color: $white-text;
+        font-style: italic;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    .banner-caption-button{
+        .diamond-button{
+            a{
+                line-height: 48px;
+                box-shadow: 0 14px 59px rgba(0, 0, 0, 0.33);
+                &:hover{
+                    border: 1px solid $primary-color-yellow;
+                }
+            }
+        }
+    }
+}
+/*
+    Our Services
+*/
+.our-services-v2{
+    position: relative;
+    > img{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -133px;
+    }
+    .box{
+        background: $white-text;
+        border-top: 5px solid #e4e4e4;
+        position: relative;
+        @include transition();
+        &:hover{
+            box-shadow: 0 10px 28px rgba(#000, .12);
+            &:before{
+                width: 100%;
+            }
+        }
+        &:before{
+            content: '';
+            width: 0;
+            height: 5px;
+            background: $primary-color-yellow;
+            position: absolute;
+            top: -5px;
+            left: 0;
+            @include transition();
+            z-index: 1;
+        }
+        .diamond-box-img-full{
+            @include translate-z(0);
+            img{
+                @include translate-z(0);
+            }
+        }
+        .box-content{
+            border: 1px solid #e4e4e4;
+            border-top: none;
+            padding: 30px;
+            @include translate-z(0);
+            h3{
+                @include font-roboto();
+                @include font-black();
+                text-transform: uppercase;
+                font-size: 19px;
+                color: $black-text;
+                margin-bottom: 20px;
+                letter-spacing: 5px;
+                line-height: 30px;
+            }
+            p{
+                @include font-roboto();
+                @include font-light();
+                font-size: 14px;
+                color: $second-text;
+            }
+        }
+    }
+}
+/*
+    About Us
+*/
+.about-us-home-four{
+    background: url('../images/index-4/about.jpg');
+    @include background-parallax();
+    .box-content{
+        background: $white-text;
+        border-radius: 25px;
+        padding: 65px 60px;
+        .diamond-title-v4{
+            padding-bottom: 43px;
+        }
+        > p{
+            @include font-roboto();
+            @include font-light();
+            font-size: 14px;
+            color: $second-text;
+            padding-bottom: 55px;
+        }
+        .diamond-button{
+            a{
+                line-height: 48px;
+                padding: 0 40px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+/*
+    Our Project
+*/
+.our-project-v2{
+    .diamond-title-v4{
+        float: left;
+    }
+    .diamond-button{
+        float: right;
+        a{
+            display: inline-block;
+            line-height: 38px;
+            border: 2px solid #b6b5b5;
+            border-radius: 38px;
+            padding: 0 27px;
+            @include font-roboto();
+            @include font-bold();
+            font-size: 12px;
+            color: $black-text;
+            &:hover{
+                border: 2px solid transparent;
+            }
+        }
+    }
+    li{
+        margin-bottom: 33px;
+        &:last-child, &:nth-last-child(2){
+            margin-bottom: 0;
+        }
+    }
+    .box{
+        .diamond-box-hv-reveal-right-overlay{
+            background: rgba(#000, .5);
+            .box-scale{
+                .box-content{
+                    a{
+                        display: inline-block;
+                        font-size: 20px;
+                        @include transition();
+                        &:hover{
+                            @include rotate(360deg);
+                        }
+                    }
+                }
+            }
+        }
+        .diamond-box-img-full{
+            h6{
+                @include font-roboto();
+                @include font-black();
+                font-style: italic;
+                font-size: 12px;
+                line-height: 27px;
+                padding: 0 24px;
+                background: $black-text;
+                position: absolute;
+                left: 0;
+                top: 19px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+        }
+        h3{
+            display: inline-block;
+            @include font-roboto();
+            @include font-bold();
+            font-size: 17px;
+            color: $black-text;
+            text-transform: uppercase;
+            padding-top: 15px;
+        }
+        p{
+            @include font-merriweather();
+            @include font-light();
+            font-size: 12px;
+            color: $second-text;
+            font-style: italic;
+        }
+    }
+}
+/*
+    Services
+*/
+.services{
+    background: url('../images/index-4/services.jpg') no-repeat center center;
+    @include background-cover();
+    .diamond-box-img-full{
+        margin-top: -30px;
+    }
+    .left{
+        .box{
+            &:nth-last-child(2){
+                padding-right: 20px;
+            }
+            .box-text{
+                order: 1;
+            }
+            .box-icon{
+                margin-left: 34px;
+                order: 2;
+            }
+        }
+    }
+    .right{
+        .box{
+            &:nth-last-child(2){
+                padding-left: 20px;
+            }
+            .box-icon{
+                margin-right: 34px;
+            }
+        }
+    }
+    .box{
+        margin-bottom: 95px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:hover{
+            .box-icon{
+                border: 2px solid $primary-color-yellow;
+                p{
+                    background: $primary-color-yellow;
+                    span{
+                        color: $white-text;
+                    }
+                }
+            }
+        }
+        .box-text{
+            h3{
+                @include font-roboto();
+                @include font-black();
+                font-size: 19px;
+                color: $black-text;
+                padding-bottom: 14px;
+                letter-spacing: 2px;
+            }
+            p{
+                @include font-roboto();
+                @include font-light();
+                font-size: 14px;
+                color: $second-text;
+            }
+        }
+        .box-icon{
+            width: 75px;
+            height: 75px;
+            border: 2px solid #c9c9c9;
+            padding: 5px;
+            border-radius: 50%;
+            @include transition();
+            position: relative;
+            p{
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+                left: 5px;
+                background: transparent;
+                @include transition();
+                span{
+                    color: rgba($black-text, .2);
+                    font-size: 28px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include translate-xy(-50%, -50%);
+                    @include transition();
+                }
+            }
+        }
+    }
+}
+/*
+    Action
+*/
+.action-v2{
+    @extend .action;
+    h3{
+        font-size: 33px;
+        letter-spacing: 10px;
+    }
+}

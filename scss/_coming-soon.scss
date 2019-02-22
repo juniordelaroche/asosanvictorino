@@ -1,0 +1,114 @@
+/*
+    Coming Soon
+*/
+.coming-soon{
+    background: url('../images/coming-soon/background.jpg') no-repeat center center;
+    @include background-cover();
+    height: 100vh;
+    .set-height{
+        height: 100%;
+    }
+    .box{
+        height: 100%;
+        a{
+            margin-top: 5vh;
+            display: inline-block;
+            img{
+                display: block;
+            }
+        }
+        h3{
+            margin-top: 5vh;
+            @include font-roboto();
+            @include font-light();
+            font-size: 60px;
+            line-height: 60px;
+            color: $white-text;
+            strong{
+                @include font-black();
+            }
+        }
+        h6{
+            margin-top: 20px;
+            @include font-roboto();
+            @include font-regular();
+            font-size: 14px;
+            color: $white-text;
+            padding: 0 25%;
+        }
+        .count-down{
+            margin-top: 13vh;
+            li{
+                padding: 25px 0;
+                display: inline-block;
+                margin: 0 28px;
+                width: 125px;
+                height: 125px;
+                background: $white-text;
+                border-radius: 20px;
+                text-align: center;
+                span{
+                    @include font-roboto();
+                    @include font-bold();
+                    font-size: 44px;
+                    line-height: 44px;
+                    color: $black-text;
+                }
+                p{
+                    @include font-roboto();
+                    @include font-light();
+                    font-size: 18px;
+                    color: $second-text;
+                    font-style: italic;
+                }
+            }
+        }
+        form{
+            margin: 13vh auto 0 auto;
+            width: 285px;
+            input{
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                background: $white-text;
+                border: 1px solid #dcddde;
+                border-radius: 5px;
+                padding: 0 50px 0 25px;
+                @include font-roboto();
+                @include font-light();
+                font-size: 12px;
+                color: $black-text;
+                outline: none;
+                &:focus{
+                    background: $white-text;
+                    border: 1px solid $primary-color-green;
+                }
+            }
+            button{
+                background: transparent;
+                outline: none;
+                border: none;
+                font-size: 12px;
+                color: $black-text;
+                opacity: .8;
+                position: absolute;
+                right: 25px;
+                top: 50%;
+                @include translate-y(-50%);
+                cursor: pointer;
+            }
+        }
+        .social{
+            margin-top: 20px;
+            li{
+                display: inline-block;
+                padding: 0 7px;
+                a{
+                    margin: 0;
+                    font-size: 12px;
+                    color: #dcddde;
+                }
+            }
+        }
+    }
+}

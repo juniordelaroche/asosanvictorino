@@ -1,0 +1,128 @@
+////[Table of contents]
+
+////1. Background Cover
+////2. Background Parallax
+////3. Translate X
+////4. Translate Y
+////5. Translate Z
+////6. Translate XY
+////7. Scale
+////8. Skew
+////9. Rotate
+////10. Transition
+////11. Font Roboto
+////12. Font Merriweather
+////13. Font Light
+////14. Font Regular
+////15. Font Medium
+////16. Font Bold
+////17. Font Black
+
+////[End table of contents]
+
+@mixin background-cover(){
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -ms-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+@mixin background-parallax(){
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -ms-background-size: cover;
+   -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin translate-x($x){
+   -webkit-transform: translateX($x);
+   -moz-transform: translateX($x);
+   -ms-transform: translateX($x);
+   -o-transform: translateX($x);
+   transform: translateX($x);
+}
+
+@mixin translate-y($y){
+   -webkit-transform: translateY($y);
+   -moz-transform: translateY($y);
+   -ms-transform: translateY($y);
+   -o-transform: translateY($y);
+   transform: translateY($y);
+}
+
+@mixin translate-z($z){
+   -webkit-transform: translateZ($z);
+   -moz-transform: translateZ($z);
+   -ms-transform: translateZ($z);
+   -o-transform: translateZ($z);
+   transform: translateZ($z);
+}
+
+@mixin translate-xy($x, $y){
+   -webkit-transform: translateX($x) translateY($y);
+   -moz-transform: translateX($x) translateY($y);
+   -ms-transform: translateX($x) translateY($y);
+   -o-transform: translateX($x) translateY($y);
+   transform: translateX($x) translateY($y);
+}
+
+@mixin scale($number){
+   -webkit-transform: scale($number);
+   -moz-transform: scale($number);
+   -ms-transform: scale($number);
+   -o-transform: scale($number);
+   transform: scale($number);
+}
+
+@mixin skew($number){
+   -webkit-transform: skew($number);
+   -moz-transform: skew($number);
+   -ms-transform: skew($number);
+   -o-transform: skew($number);
+   transform: skew($number);
+}
+
+@mixin rotate($number){
+    -webkit-transform: rotate($number);
+    -moz-transform: rotate($number);
+    -ms-transform: rotate($number);
+    -o-transform: rotate($number);
+    transform: rotate($number);
+}
+
+@mixin transition(){
+    transition: all .5s ease;
+}
+
+@mixin font-roboto(){
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin font-merriweather(){
+    font-family: 'Merriweather', sans-serif;
+}
+
+@mixin font-light{
+    font-weight: 300;
+}
+
+@mixin font-regular{
+    font-weight: 400;
+}
+
+@mixin font-medium{
+    font-weight: 500;
+}
+
+@mixin font-bold{
+    font-weight: 700;
+}
+
+@mixin font-black{
+    font-weight: 900;
+}

@@ -1,0 +1,20 @@
+/*
+    Our Team
+*/
+.our-team{
+    @extend .testimonial-v2;
+    &.diamond-set-pd{
+        padding-top: 95px;
+    }
+    .diamond-title-v1{
+        padding-bottom: 65px;
+    }
+    li{
+        position: relative;
+        z-index: 1;
+        margin-bottom: 57px;
+        &:last-child, &:nth-last-child(2){
+            margin-bottom: 0;
+        }
+    }
+}

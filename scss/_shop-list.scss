@@ -1,0 +1,70 @@
+/*
+    Shop List
+*/
+.shop-list{
+    .box-product{
+        margin-bottom: 30px;
+        border: 1px solid #e4e4e4;
+        border-radius: 5px;
+        .box-img{
+            padding: 15px;
+            border-radius: 5px;
+            background: #fafafa;
+            img{
+                display: block;
+            }
+        }
+        .box{
+            border-left: 1px solid #e4e4e4;
+        }
+        .box-product-info{
+            padding: 30px 40px;
+            h3{
+                @include font-roboto();
+                @include font-medium();
+                font-size: 26px;
+                line-height: 30px;
+                color: $black-text;
+                display: inline-block;
+            }
+            .rating{
+                margin-bottom: 8px;
+                line-height: 10px;
+                li{
+                    display: inline-block;
+                    span{
+                        font-size: 10px;
+                        color: #f2cf2d;
+                    }
+                }
+            }
+            p{
+                @include font-roboto();
+                @include font-regular();
+                font-size: 14px;
+                color: $second-text;
+                i{
+                    color: #dcddde;
+                    text-decoration: line-through;
+                    padding-right: 10px;
+                }
+                span{
+                    @include font-bold();
+                }
+            }
+            .diamond-button{
+                display: inline-flex;
+                margin-top: 25px;
+                margin-right: 20px;
+                .diamond-button-bd-green{
+                    &:hover{
+                        border: 1px solid $primary-color-green;
+                    }
+                }
+            }
+        }
+    }
+    .diamond-pagination{
+        margin-top: 25px;
+    }
+}

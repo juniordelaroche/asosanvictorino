@@ -1,0 +1,32 @@
+/*
+    404
+*/
+.page-not-found{
+    padding: 195px 0;
+    .title{
+        display: inline-block;
+        h1{
+            @include font-roboto();
+            @include font-black();
+            font-size: 110px;
+            color: $black-text;
+            line-height: 110px;
+            padding-bottom: 10px;
+        }
+        h3{
+            @include font-roboto();
+            @include font-regular();
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 10px;
+            padding-bottom: 40px;
+        }
+    }
+    p{
+        @include font-roboto();
+        @include font-regular();
+        font-size: 19px;
+        padding-bottom: 17px;
+        color: $second-text;
+    }
+}
